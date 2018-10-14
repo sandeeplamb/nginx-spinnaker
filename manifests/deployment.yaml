@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx-spinnaker
+  name: nginx-spinnaker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx-spinnaker
+  template:
+    metadata:
+      labels:
+        run: nginx-spinnaker
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-spinnaker
+        ports:
+        - containerPort: 80
+        resources: {}
