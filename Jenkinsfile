@@ -4,6 +4,7 @@ pipeline {
         stage('Git-Clone') {
             steps {
                 sh 'echo "Cloning ...!" '
+                sh 'pwd'
                 sh 'rm -rf *; rm -rf .git*;'
                 sh 'git clone https://github.com/sandeeplamb/nginx-spinnaker.git .'
             }
