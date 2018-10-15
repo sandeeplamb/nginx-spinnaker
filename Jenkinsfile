@@ -22,7 +22,6 @@ pipeline {
         stage ('Terraform-Approve') {
             steps {
                 sh 'echo "Approve the Infrastructure."'
-                input "Deploy to prod?"
             }
         }
         stage ('Terraform-Apply'){
